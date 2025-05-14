@@ -3,11 +3,11 @@
 #include <HTTPClient.h>
 
 // Definisikan pin sensor
-#define DHT22_PIN_1 14
+#define DHT22_PIN_1 14 //
 #define DHT22_PIN_2 27
 #define LED_PIN 2 // LED indikator
 
-#define DHT22_TYPE DHT22
+#define DHT22_TYPE DHT22 
 
 // Buat objek untuk masing-masing sensor
 DHT dht1(DHT22_PIN_1, DHT22_TYPE);
@@ -97,7 +97,7 @@ void loop() {
     // Kirim data ke Firebase
     if (WiFi.status() == WL_CONNECTED) {
       HTTPClient http;
-      String url = firebaseHost + "/sensorData/2508120398124.json";
+      String url = firebaseHost + "/sensorData/1000000009.json"; 
 
       String jsonData = "{";
       if (valid1) {
