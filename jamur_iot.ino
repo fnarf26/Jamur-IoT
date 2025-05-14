@@ -26,7 +26,7 @@ void setup() {
   digitalWrite(LED_PIN, LOW);
 
   WiFi.begin(ssid, password);
-  while (WiFi.status() != WL_CONNECTED) {
+  while (WiFi.status() != WL_CONNECTED) {   //njajal ngedit
     delay(1000);
     Serial.println("Menyambung ke WiFi...");
   }
